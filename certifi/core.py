@@ -9,6 +9,7 @@ This module returns the installation location of cacert.pem.
 """
 import os
 import warnings
+import platform
 
 
 class DeprecatedBundleWarning(DeprecationWarning):
@@ -20,8 +21,11 @@ class DeprecatedBundleWarning(DeprecationWarning):
 
 def where():
     f = os.path.split(__file__)[0]
-# Point instead to ubuntu concatenated ca-certificates.crt
-    return "/etc/ssl/certs/ca-certificates.crt"
+
+    if platform.linux_distribution()[0] == 'Ubuntu'
+       return "/etc/ssl/certs/ca-certificates.crt"
+    else
+       return os.path.join(f, 'cacert.pem')
 
 
 def old_where():
