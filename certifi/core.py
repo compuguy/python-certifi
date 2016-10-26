@@ -20,8 +20,8 @@ class DeprecatedBundleWarning(DeprecationWarning):
 
 def where():
     f = os.path.split(__file__)[0]
-
-    return os.path.join(f, 'cacert.pem')
+# Point instead to ubuntu concatenated ca-certificates.crt
+    return "/etc/ssl/certs/ca-certificates.crt"
 
 
 def old_where():
