@@ -24,7 +24,7 @@ def where():
 
     if (platform.linux_distribution()[0] == 'Ubuntu') and sys.platform.startswith('linux'):
        return "/etc/ssl/certs/ca-certificates.crt"
-    else
+    else:
        return os.path.join(f, 'cacert.pem')
 
 
