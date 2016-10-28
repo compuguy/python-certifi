@@ -1,2 +1,14 @@
 *.pyc
 MANIFEST
+
+certifi.egg-info/dependency_links.txt
+
+certifi.egg-info/PKG-INFO
+
+certifi.egg-info/SOURCES.txt
+
+certifi.egg-info/top_level.txt
+
+*.tar.gz
+
+*.zip
